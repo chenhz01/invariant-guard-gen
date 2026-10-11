@@ -4,6 +4,8 @@ Turn the `Invariant:` lines and `assert` statements already sitting in your Pyth
 
 As of 2026-10-11, three rounds of repository search found no direct equivalent found for docstring-driven property-check generation with static extraction only ("no direct equivalent found as of 2026-10-11").
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Invariants live in the worst possible place: prose. `"""Invariant: the result is sorted ascending."""` documents intent, enforces nothing, and drifts silently when the implementation changes. Formal methods (Z3, Dafny, contracts) could verify such claims but demand a rewrite into a new language — which is why almost nobody does it. The result: assertions are deleted in release builds, docstring promises are never executed, and the only test is whatever example the author remembered to write.
